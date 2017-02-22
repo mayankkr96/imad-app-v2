@@ -1,6 +1,6 @@
 console.log('Loaded!');
 document.getElementById("maintext").innerHTML='Welcome';
-var img=document.getElementById('mainimg');
+var img=document.getElementById('');
 var marginleft=0;
 function move()
 {
