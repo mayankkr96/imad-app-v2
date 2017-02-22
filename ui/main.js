@@ -4,9 +4,9 @@ var img=document.getElementById('mainimg');
 var marginleft=0;
 function move()
 {
-    marginleft=marginleft+2;
+    marginleft=marginleft+1;
     img.style.marginLeft=marginleft + 'px';
 }
 img.onclick = function(){
- var interval=setInterval(move , 20);   
+ var interval=setInterval(move , 25);   
 };
