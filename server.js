@@ -16,7 +16,7 @@ var Article = {
 
 
 function createtemplate (data) {
-    var titile = data.title;
+    var title = data.title;
     var heading = data.heading;
     var content = data.content;
     var articletemplate = `
