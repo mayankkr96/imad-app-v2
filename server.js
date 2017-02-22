@@ -5,13 +5,24 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var Article = {
-  title: 'Makerafts | Article One',
-  heading: 'First Makeraft Article',
-  content: `<p>
-                This is content Part of the Article One.
-           </p>
-           `
+var  Articles = {
+    Article_One: {
+      title: 'Makerafts | Article One',
+      heading: 'First Makeraft Article',
+      content: `<p>
+                    Content here is something that does not really matter.
+               </p>
+               `
+    },
+    
+    Article_two: {
+      title: 'Makerafts | Article Two',
+      heading: 'Second Makeraft Article',
+      content: `<p>
+                    This is content Part of the Article two which actually is of no use again.
+               </p>
+               `
+    }
 };
 
 
