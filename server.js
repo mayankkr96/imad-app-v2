@@ -32,6 +32,7 @@ function createtemplate (data) {
     var articletemplate = `
     <html>
         <head>
+            <link href="/ui/makeraft_upload.jpeg" rel="icon">
             <title>
                 ${title}
             </title>
