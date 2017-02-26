@@ -24,7 +24,6 @@ button.onclick=function(){
     request.open('GET','http://mayankkr96.imad.hasura-app.io/counter',true);
     request.send(null);
 };
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     var NameInput = document.getElementById('name');
