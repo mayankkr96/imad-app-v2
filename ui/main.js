@@ -45,7 +45,7 @@ submit.onclick = function(){
         }
         var link = 'http://mayankkr96.imad.hasura-app.io/submit_name/';
         link += name;
+        request.open('GET',link,true);
+        request.send(null);
     };
-    request.open('GET',link,true);
-    request.send(null);
 };
