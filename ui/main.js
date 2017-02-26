@@ -27,3 +27,16 @@ button.onclick=function(){
     request.open('GET','http://mayankkr96.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+var NameInput = document.getElementById('name');
+var name = NameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+    var names = ['shalini','loves','mayank'];
+    var list = '';
+    for(var i = names.length - 1; i>-1; i--){
+        list += '<li>' + 'names[i]' + '</li>';
+    }
+    var ul = document.getElementById('nameList');
+    ul.innerHTML = list;    
+};
