@@ -29,6 +29,7 @@ submit.onclick = function(){
     var NameInput = document.getElementById('name');
     var name = NameInput.value;
     var request = new XMLHttpRequest();
+    var link = 'http://mayankkr96.imad.hasura-app.io/submit_name/';
     request.onreadystatechange = function(){
         if (request.readyState===XMLHttpRequest.DONE){
             if (request.status===200){
@@ -42,9 +43,8 @@ submit.onclick = function(){
                 ul.innerHTML = list;    
             }
         }
-        var link = 'http://mayankkr96.imad.hasura-app.io/submit_name/';
         link += name;
-        request.open('GET',link,true);
-        request.send(null);
     };
+    request.open('GET',link,true);
+    request.send(null);
 };
