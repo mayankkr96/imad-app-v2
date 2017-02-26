@@ -30,20 +30,22 @@ submit.onclick = function(){
     var NameInput = document.getElementById('name');
     var name = NameInput.value;
     var request = new XMLHttpRequest();
-    var names = [];
     request.onreadystatechange = function(){
         if (request.readyState===XMLHttpRequest.DONE){
             if (request.status===200){
-                names = JSON.parse(request.responseText);
+                var names = request.responseText;
+                names = JSON.parse(names);
+                var list = '';
+                for(var i = 0; i<names.length; i++){
+                    list += '<li>' + names[i] + '</li>';
+                }
+                var ul = document.getElementById('nameList');
+                ul.innerHTML = list;    
             }
         }
+        var link = 'http://mayankkr96.imad.hasura-app.io/submit_name/';
+        link += name;
     };
-    request.open('GET','http://mayankkr96.imad.hasura-app.io/submit_name/' + name,true);
+    request.open('GET',link,true);
     request.send(null);
-    var list = '';
-    for(var i = names.length - 1; i>-1; i--){
-        list += '<li>' + names[i] + '</li>';
-    }
-    var ul = document.getElementById('nameList');
-    ul.innerHTML = list;    
 };
