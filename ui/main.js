@@ -1,16 +1,13 @@
 console.log('Loaded!');
-//document.getElementById("maintext").innerHTML='Welcome';
 var img=document.getElementById('mainimg');
 var marginleft=0;
-function move()
-{
+function move(){
     marginleft=marginleft+1;
     img.style.marginLeft=marginleft + 'px';
 }
 img.onclick = function(){
  var interval=setInterval(move , 25);   
 };
-
 var button=document.getElementById('counter');
 var counter=0;
 button.onclick=function(){
@@ -27,7 +24,6 @@ button.onclick=function(){
     request.open('GET','http://mayankkr96.imad.hasura-app.io/counter',true);
     request.send(null);
 };
-
 var NameInput = document.getElementById('name');
 var name = NameInput.value;
 var submit = document.getElementById('submit_btn');
