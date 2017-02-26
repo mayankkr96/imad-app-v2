@@ -35,7 +35,7 @@ submit.onclick = function(){
     var names = ['shalini','loves','mayank'];
     var list = '';
     for(var i = names.length - 1; i>-1; i--){
-        list += '<li>' + 'names[i]' + '</li>';
+        list += '<li>' + names[i] + '</li>';
     }
     var ul = document.getElementById('nameList');
     ul.innerHTML = list;    
